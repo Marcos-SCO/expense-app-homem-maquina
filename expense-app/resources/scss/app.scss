@@ -1,0 +1,20 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.page-header {
+    background: linear-gradient(to right, #192c85 0%, #1c3192 35% 100%);
+}
+
+.list-container {
+  overflow: auto;
+  width: 100%;
+  
+  .list-group {
+    min-width: 920px;
+  }
+}
+
+.pagination-container {
+    .page-link {
+        font-size: 1.15rem;
+    }
+}
