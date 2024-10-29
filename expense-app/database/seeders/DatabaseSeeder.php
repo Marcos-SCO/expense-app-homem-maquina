@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
         CategoryFactory::createAllCategories();
 
         // Create 50 expenses, each linked to a random category
-        Expense::factory(30)->create();
+        Expense::factory(100)->create();
     }
 }
