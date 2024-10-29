@@ -1,0 +1,57 @@
+.pagination-container {
+
+    .page-item {
+        margin: .4rem;
+    }
+
+    .page-link {
+        font-size: .9rem;
+        color: #d51482;
+
+        padding: .5rem 1rem;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: #fff;
+            background-color: #d51482;
+            border-color: #d51482;
+            outline: none;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(213, 20, 130, 0.5);
+        }
+    }
+
+    .page-link {
+        &:hover {
+        }
+    }
+
+    span.page-link {
+        cursor: not-allowed;
+        color: #fff;
+        background-color: #d51482;
+
+        &:hover {
+            // background-color: #fff;
+            // color: #d51482;
+        }
+    }
+
+    .page-item.active {
+        .page-link {
+            border-color: #d51482;
+        }
+    }
+
+    .page-item.disabled {
+        cursor: not-allowed;
+
+        .page-link {
+            color: #d51482;
+            background-color: transparent;
+        }
+    }
+}
