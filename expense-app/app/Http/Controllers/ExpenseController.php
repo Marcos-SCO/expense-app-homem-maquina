@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ExpenseRequest;
 use App\Models\Category;
 use App\Models\Expense;
 use Illuminate\Http\Request;
@@ -24,19 +25,13 @@ class ExpenseController extends Controller
         return view('expenses.create', compact('categories'));
     }
 
-    public function store(Request $request)
+    public function store(ExpenseRequest $request)
     {
-        $request->validate([
-            'category_id' => 'required|exists:categories,id',
-            'description' => 'required|string',
-            'amount' => 'required|numeric',
-            'expense_date' => 'required|date',
-        ]);
+        Expense::create($request->validated());
 
-        Expense::create($request->all());
-
-        return redirect()->route('expenses.index');
+        return redirect()->route('expenses.index')->with('success', 'Despesa adicionada com sucesso.');
     }
+
 
     public function edit($id)
     {
@@ -46,22 +41,11 @@ class ExpenseController extends Controller
         return view('expenses.edit', compact('expense', 'categories'));
     }
 
-    public function update(Request $request, $id)
+    public function update(ExpenseRequest $request, $id)
     {
-        $request->validate([
-            'category_id' => 'required|exists:categories,id',
-            'description' => 'required|string',
-            'amount' => 'required|numeric',
-            'expense_date' => 'required|date',
-        ]);
-
         $expense = Expense::findOrFail($id);
-        $expense->update([
-            'category_id' => $request->category_id,
-            'description' => $request->description,
-            'amount' => $request->amount,
-            'expense_date' => $request->expense_date,
-        ]);
+
+        $expense->update($request->validated());
 
         return redirect()->route('expenses.index')->with('success', 'Despesa atualizada com sucesso.');
     }
