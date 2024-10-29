@@ -1,9 +1,7 @@
 # Expense-app-homem-maquina 🚀
 Expense app - Homem Máquina test
 
-Projeto realizado como teste fullstack
-
-Em conjunto com outras ferramentas o framework Laravel foi utilizado de forma monolítica para construir um CRUD de dados
+Um projeto fullstack desenvolvido como teste para Homem Máquina, utilizando o framework Laravel de forma monolítica para construir um CRUD de dados.
 
 <p>Disponível para acesso em: <a href="https://homemmaquina.infinityfreeapp.com/" target="_blank">https://homemmaquina.infinityfreeapp.com/</a></p>
 
