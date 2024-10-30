@@ -5,7 +5,7 @@
 <div class="container mt-5">
     <h1 class="mb-4">{{ __("Editar Despesa") }}</h1>
 
-    <form action="{{ route('expenses.update', $expense->id) }}" method="POST" class="mb-4 content-form" hx-post="{{ route('expenses.update', $expense->id) }}" hx-boost="true" hx-target="body" hx-push-url="true">
+    <form action="{{ route('expenses.update', $expense->id) }}" method="POST" class="mb-4 content-form" hx-post="{{ route('expenses.update', $expense->id) }}" hx-boost="true" hx-target="main" hx-select="main" hx-push-url="true">
 
         @csrf
         @method('PUT')

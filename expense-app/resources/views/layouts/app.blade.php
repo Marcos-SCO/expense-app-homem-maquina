@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="page-header py-5 text-white" hx-boost="true" hx-target="body" hx-swap="outerHTML" hx-push-url="true">
+  <header class="page-header py-5 text-white" hx-boost="true" hx-target="main" hx-select="main" hx-swap="outerHTML" hx-push-url="true">
 
     <h1 class="text-center">{{ __('Registro de despesas') }}</h1>
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" hx-boost="true" hx-target="body" hx-swap="outerHTML" hx-push-url="true">
+<div class="container" hx-boost="true" hx-target="main" hx-select="main" hx-swap="outerHTML" hx-push-url="true">
   <h1 class="mb-4">{{ __("Despesas") }}</h1>
 
   <a href="{{ route('expenses.create') }}" class="btn pink-button-color mb-4" title="{{ __('Adicionar nova dispesa') }}">+ {{ __('Nova Despesa') }}</a>
