@@ -22,6 +22,8 @@
 
   <main class="container mt-4 mb-5">
 
+    <div data-js="loader" class="loader">{{ __('Carregando') }}...</div>
+
     @if (session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert" data-js="success-alert">
       {{ session('success') }}

@@ -1,14 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import './_bootstrapRewrites.scss';
 
+@import './pageLoader';
 @import './components/pagination';
-
-
-.loading {
-    opacity: 0.5; 
-    pointer-events: none;
-}
-
 
 label {
     cursor: pointer;
